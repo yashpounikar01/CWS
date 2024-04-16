@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #content {
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Toggle Text</h1>
+    <div id="content">
+        <p id="dynamicText">Click the button to toggle text.</p>
+        <button onclick="toggleText()">Toggle Text</button>
+    </div>
+
+    <script>
+        var textToggle = true;
+
+        function toggleText() {
+            var paragraph = document.querySelector("#dynamicText");
+            if (textToggle) {
+                paragraph.textContent = "Text changed to first option.";
+            } else {
+                paragraph.textContent = "Text changed to second option.";
+            }
+            textToggle = !textToggle; // toggle the state
+        }
+    </script>
+</body>
+</html>
